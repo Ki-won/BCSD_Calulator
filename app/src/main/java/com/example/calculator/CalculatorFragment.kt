@@ -11,15 +11,6 @@ import org.w3c.dom.Text
 class CalculatorFragment : Fragment() {
 
 
-    fun buttonClicked(v: View){
-    }
-    fun resultButtonClicked(v: View){
-    }
-    fun historyButtonClicked(v: View){
-    }
-    fun clearButtonClicked(v: View){
-    }
-
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -32,17 +23,24 @@ class CalculatorFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        private val expressionTextView: TextView by lazy {
+
+        val expressionTextView: TextView by lazy {
             view.findViewById<TextView>(R.id.txt_expression)
         }
-        private val resultTextView: TextView by lazy {
+        val resultTextView: TextView by lazy {
             view.findViewById<TextView>(R.id.txt_result)
         }
 
-        private var isOperator = false
-        private var hasOperator = false
-
-
+        var isOperator = false
+        var hasOperator = false
+    }
+    fun buttonClicked(v: View){
+    }
+    fun resultButtonClicked(v: View){
+    }
+    fun historyButtonClicked(v: View){
+    }
+    fun clearButtonClicked(v: View){
 
     }
 }

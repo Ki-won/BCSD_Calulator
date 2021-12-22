@@ -267,7 +267,7 @@
                 android:background="@drawable/button_background"
                 android:onClick="historyButtonClicked"
                 android:stateListAnimator="@null"
-                android:src="@drawable/ic_baseline_access_time_24"
+                android:src="@drawable/ic_baseline_search_24"
                 android:textColor="@color/textColor"
                 android:textSize="24sp" />
 

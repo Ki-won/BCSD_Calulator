@@ -25,8 +25,6 @@ class MainActivity : AppCompatActivity() {
                 R.id.menu_Calculator -> showFragment(calculatorFragment)
             }
 
-            true
-
         }
     }
 
