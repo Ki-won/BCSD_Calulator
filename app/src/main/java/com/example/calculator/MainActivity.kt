@@ -14,17 +14,18 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
         setContentView(R.layout.activity_main)
 
 
         val bottomNavigationView =
             findViewById<BottomNavigationView>(R.id.bottom_navigation_list_calu)
-        bottomNavigationView.setOnItemReselectedListener {
+        bottomNavigationView.setOnItemSelectedListener {
             when (it.itemId) {
                 R.id.menu_list -> showFragment(listFragment)
                 R.id.menu_Calculator -> showFragment(calculatorFragment)
             }
-
+            true
         }
     }
 
