@@ -11,8 +11,9 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        tools:listitem="@layout/list_item_main"
-        />
+        tools:layout_editor_absoluteY="0dp"
+        tools:listitem="@layout/list_item_main" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
