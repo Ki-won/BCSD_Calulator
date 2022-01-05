@@ -2,14 +2,16 @@ package com.example.calculator
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import android.widget.EditText
 import androidx.recyclerview.widget.RecyclerView
 
 class RecyclerViewListAdapter : RecyclerView.Adapter<RecyclerViewListViewHolder>() {
 
-    private val itemList = mutableListOf<RecyclerViewListViewHolder>()
+    private val items = mutableListOf<RecyclerViewListViewHolder>()
 
 
     private var itemClickListener: RecyclerViewItemClickListener? = null
+    private val costomDig : GetTextDlg? = null
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerViewListViewHolder {
         val view =
@@ -18,7 +20,7 @@ class RecyclerViewListAdapter : RecyclerView.Adapter<RecyclerViewListViewHolder>
     }
 
     override fun onBindViewHolder(holder: RecyclerViewListViewHolder, position: Int) {
-        holder.listText.text = itemList.toString()
+        holder.listText.text = items.toString()
 
         holder.listContainer.setOnClickListener {
             itemClickListener?.onRecyclerViewItemClicked(
@@ -36,7 +38,7 @@ class RecyclerViewListAdapter : RecyclerView.Adapter<RecyclerViewListViewHolder>
     }
 
     override fun getItemCount(): Int {
-        return itemList.size
+        return items.size
     }
 
     fun setRecyclerViewClickListener(itemClickListener: RecyclerViewItemClickListener) {
@@ -44,13 +46,12 @@ class RecyclerViewListAdapter : RecyclerView.Adapter<RecyclerViewListViewHolder>
     }
 
     fun deleteListItem(position: Int) {
-        itemList.removeAt(position)
+        items.removeAt(position)
         notifyDataSetChanged()
     }
 
-    fun addData(position: Int){
-
-
+    fun addListItem(position: Int, string: String){
+        notifyItemChanged(position, string)
     }
 
 }
